@@ -9,48 +9,73 @@
 		crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/video.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
 <body>
 	<main>
-		<h1>JS Video Player</h1>
+		<div class="container">
+			<h1>JS Video Player</h1>
+			<figure>
+				<video class="video" autoplay="false" width="640" height="360" id="player1" preload="none"
+					src="assets/Jam.mov" />
 
+				<track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
+				Your browser does not support HTML5 video.
+				</video>
+				<figcaption>
+					<p>Part of a 26 minute jam from July 2021. Performer: Jon Christie</p>
+					<p><a href="https://www.youtube.com/watch?v=w-MZCl9MygQ&list=PLBrVt1MNs5pyE3lz7onf01rZU5CtxyMT5&index=1"
+							alt="jam jon christie youtube improvisation">FULL 26 MINUTE JAM HERE!</a></p>
+				</figcaption>
+			</figure>
+			<div class="options">
+				<div class="imgBox">
+					<img class="image" id="play" src="./assets/play.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="pause" src="./assets/pause.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="slower" src="./assets/slowdown.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="faster" src="./assets/speedup.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="back" src="./assets/back.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="skip" src="./assets/skip.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="mute" src="./assets/mute.png" alt="video player play" />
+				</div>
+			</div>
+			<div class="options">
+				<div class="imgBox display">
+					<img class="image" id="vintage" src="./assets/bandw.png" alt="video player play" />
+				</div>
+				<div class="imgBox display">
+					<img class="image" id="orig" src="./assets/color.png" alt="video player play" />
+				</div>
+			</div>
 
-		<figure>
-			<video class="video" autoplay="false" width="640" height="360" id="player1" preload="none"
-				src="assets/Jam.mov" />
-
-			<track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
-			Your browser does not support HTML5 video.
-			</video>
-			<figcaption>
-				<p>Part of a 26 minute jam from July 2021. Performer: Jon Christie</p>
-				<p><a href="https://www.youtube.com/watch?v=w-MZCl9MygQ&list=PLBrVt1MNs5pyE3lz7onf01rZU5CtxyMT5&index=1"
-						alt="jam jon christie youtube improvisation">FULL 26 MINUTE JAM HERE!</a></p>
-			</figcaption>
-		</figure>
-		<div class = "options">
-			<button  id = "play">▶︎</button>
-			<button  id = "pause">◼︎</button>
-			<button  id = "slower">↓</button>
-			<button  id = "faster">↑</button>
-			<button  id = "skip">⤑</button>
+			<h3>
+				<label for="slider">
+					Volume
+				</label>
+				: 0 
+				<input type="range" id="slider" min="0" max="100" value="100" step="5">
+				100%&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="volume"></span>
+			</h3>
+			<br>
+			<p>©2022 Jon Christie</p>
 		</div>
-		<button id="mute">Mute</button><br>
-
-		<label for="slider">Volume</label>: 0 <input type="range" id="slider" min="0" max="100" value="100" step="10">
-		100%<br>
-		<div>Volume is: <span id="volume"> </span><br><br></div>
-
-		<button id="vintage">Old School</button>
-		<button id="orig">Original</button>
-
-		<p>©2022 Jon Christie.</p>
-
 	</main>
-	<script src="js/video.js"></script>
+	
+	<script src="js/script.js"></script>
 </body>
-
 </html>
