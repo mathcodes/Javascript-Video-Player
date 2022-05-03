@@ -1,0 +1,92 @@
+body{
+	background-color: #222;
+	color:#bdbdbd;
+}
+.options{
+	padding: 10px;
+	border:4px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	border-radius: 5px;
+	background-color: #435e43;
+
+}
+.video{
+	display: block;
+	background-color: #222222;
+	width: 75%;
+	padding: 3rem;
+	border: 2px solid black;
+	margin: 0 auto;
+	border-radius:20px;
+}
+
+figcaption{
+	text-align: center;
+}
+.oldSchool{
+	filter: grayscale(100%);
+	width:75%;
+	border:5px double grey;
+	border-radius:20px;
+}
+button{
+	margin-bottom: 5px;
+	flex-basis: 200px;
+	font-size:125%;
+}
+
+img {
+	padding-left:.6rem;
+	padding-top:.6rem;
+	height:2rem;
+}
+
+.logo{
+	height: 4rem;
+}
+
+.header{
+	display: flex;
+	justify-content:left;
+	align-items: left;
+	padding: 1rem;
+	background-color: #222;
+	color: #bdbdbd;
+	border-radius: 5px;
+	font-size: 150%;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.imgBox{
+	font-align: left;
+	color: black;
+	height: 5rem;
+	width: 10rem;
+	margin:.2rem;
+	border: solid 2px black;
+	border-radius: 5px;
+	background-color: #9fd89f;
+}
+
+.imgBox:hover{
+	background-color:#fff;
+	border: solid 5px #ff33ff;
+}
+
+img.image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.display{
+	background-color: #fff;
+}
+
+.display:hover{
+	background-color: #9fd89d;
+	border: solid 5px #ff33ff;
+}
