@@ -52,7 +52,10 @@ img {
 	justify-content:left;
 	align-items: left;
 	padding: 1rem;
-	background-color: #222;
+
+	background-color: #111;
+
+
 	color: #bdbdbd;
 	border-radius: 5px;
 	font-size: 150%;
@@ -63,7 +66,9 @@ img {
 .imgBox{
 	font-align: left;
 	color: black;
-	height: 3rem;
+
+	height: 5rem;
+
 	width: 10rem;
 	margin:.2rem;
 	border: solid 2px black;
