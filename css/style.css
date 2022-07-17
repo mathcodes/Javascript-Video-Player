@@ -41,10 +41,28 @@ img {
 	padding-left:.6rem;
 	padding-top:.6rem;
 	height:2rem;
-
 }
 
+.logo{
+	height: 4rem;
+}
+
+.header{
+	display: flex;
+	justify-content:left;
+	align-items: left;
+	padding: 1rem;
+	background-color: #222;
+	color: #bdbdbd;
+	border-radius: 5px;
+	font-size: 150%;
+	font-family: 'Roboto', sans-serif;
+}
+
+
 .imgBox{
+	font-align: left;
+	color: black;
 	height: 3rem;
 	width: 10rem;
 	margin:.2rem;
