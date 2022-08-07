@@ -11,37 +11,25 @@
 		crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-	<link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
+	
+		<link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
 	<link href="./fontawesome/css/brands.css" rel="stylesheet">
 	<link href="./fontawesome/css/solid.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 
 <body>
 	<main>
 		<div class="container">
-
-			<div class="header">
-				<img class="logo" src="./assets/blueJcircle.png">
-			</div>
-		
+			<h1>JS Video Player</h1>
 			<figure>
-				<video class="video" autoplay width="640" height="360" id="player1" preload="none"
+				<video class="video" autoplay="false" width="640" height="360" id="player1" preload="none"
 					src="assets/Jam.mov" />
-
- 
-			<div class="header">
-				<img class="logo" src="./assets/blueJcircle.png">
-			</div>
-		
-			
-			<figure>
-				<video class="video" autoplay="false" width="640" height="360" id="player1" preload="none" src="assets/Jam.mov" />
-
 
 				<track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
 				Your browser does not support HTML5 video.
@@ -53,43 +41,35 @@
 				</figcaption>
 			</figure>
 			<div class="options">
-
-				<button id="play" class="button is-large imgBox">
-					<i class="fa-solid fa-play"></i>
-				</button>
-				<button id="pause" class="button is-large imgBox">
-					<i class="fa-solid fa-pause"></i>
-				</button>
-				<button id="slower" class="button is-large imgBox">
-					<i class="fa-solid fa-backward-fast"></i>
-				</button>
-				<button id="faster" class="button is-large imgBox">
-					<i class="fa-solid fa-forward-fast"></i>
-				</button>
-				<button id="back" class="button is-large imgBox">
-					<i class="fa-solid fa-backward-step"></i>
-				</button>
-				<button id="skip" class="button is-large imgBox">
-					<i class="fa-solid fa-forward-step"></i>
-				</button>
+				<div class="imgBox">
+					<img class="image" id="play" src="./assets/play.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="pause" src="./assets/pause.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="slower" src="./assets/slowdown.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="faster" src="./assets/speedup.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="back" src="./assets/back.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="skip" src="./assets/skip.png" alt="video player play" />
+				</div>
+				<div class="imgBox">
+					<img class="image" id="mute" src="./assets/mute.png" alt="video player play" />
+				</div>
 			</div>
 			<div class="options">
-				<!-- <div class="imgBox display">
+				<div class="imgBox display">
 					<img class="image" id="vintage" src="./assets/bandw.png" alt="video player play" />
 				</div>
 				<div class="imgBox display">
 					<img class="image" id="orig" src="./assets/color.png" alt="video player play" />
-				</div> -->
-				<button class="button is-large imgBox">
-					<i id="vintage" class="fa-solid fa-circle-half-stroke image"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i id="orig" class="fa-solid fa-palette image"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-volume-xmark"></i>
-				</button>
-
+				</div>
 			</div>
 
 			<h3>
