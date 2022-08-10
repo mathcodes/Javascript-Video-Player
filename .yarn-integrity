@@ -1,0 +1,16 @@
+{
+  "systemParams": "darwin-x64-93",
+  "modulesFolders": [
+    "node_modules"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [
+    "bootstrap-icons@^1.9.1"
+  ],
+  "lockfileEntries": {
+    "bootstrap-icons@^1.9.1": "https://registry.yarnpkg.com/bootstrap-icons/-/bootstrap-icons-1.9.1.tgz#cf22d91a25447645e45c49ebde4e56eafdfe761b"
+  },
+  "files": [],
+  "artifacts": {}
+}
