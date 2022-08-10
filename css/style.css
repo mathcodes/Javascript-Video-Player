@@ -45,6 +45,9 @@ img {
 }
 
 .imgBox{
+	font-align: center;
+	color: black;
+ 
 	height: 3rem;
 	width: 10rem;
 	margin:.2rem;
@@ -72,3 +75,4 @@ img.image {
 	background-color: #9fd89d;
 	border: solid 5px #ff33ff;
 }
+

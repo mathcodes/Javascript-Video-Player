@@ -90,4 +90,5 @@ document.querySelector("#vintage").addEventListener("click", function() {
 document.querySelector("#orig").addEventListener("click", function() {
 	console.log("Original");
 	video.classList.remove("oldSchool")
-});
+ 
+}); 
