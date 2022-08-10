@@ -11,23 +11,17 @@
 		crossorigin="anonymous"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
- 
-	<link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
-	<link href="./fontawesome/css/brands.css" rel="stylesheet">
-	<link href="./fontawesome/css/solid.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
- 
 	
 		<link href="./fontawesome/css/fontawesome.css" rel="stylesheet">
-	<link href="./fontawesome/css/brands.css" rel="stylesheet">
-	<link href="./fontawesome/css/solid.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+		<link href="./fontawesome/css/brands.css" rel="stylesheet">
+		<link href="./fontawesome/css/solid.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+	
 		<link rel="stylesheet" type="text/css" href="css/style.css">
- 
+	
+	
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.scss">
 
 </head>
 
@@ -36,10 +30,7 @@
 		<div class="container">
 			<h1>JS Video Player</h1>
 			<figure>
- 
-	 
 				<video class="video" autoplay="false" width="640" height="360" id="player1" preload="none"
- 
 					src="assets/Jam.mov" />
 
 				<track src="captions_en.vtt" kind="captions" srclang="en" label="english_captions">
@@ -52,63 +43,76 @@
 				</figcaption>
 			</figure>
 			<div class="options">
- 
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-play"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-pause"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-backward-fast"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-forward-fast"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-backward-step"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-forward-step"></i>
-				</button>
+				
+				<div class="imgBox specialPlay" id="play">
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black" class="bi bi-play-fill" viewBox="0 0 16 16">
+						<path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+					</svg>
+				</div>
+				<div class="imgBox" id="pause">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 12V4C0 2.89543 0.895431 2 2 2H14C15.1046 2 16 2.89543 16 4V12C16 13.1046 15.1046 14 14 14H2C0.895431 14 0 13.1046 0 12ZM6.25 5C5.55964 5 5 5.55964 5 6.25V9.75C5 10.4404 5.55964 11 6.25 11C6.94036 11 7.5 10.4404 7.5 9.75V6.25C7.5 5.55964 6.94036 5 6.25 5ZM9.75 5C9.05964 5 8.5 5.55964 8.5 6.25V9.75C8.5 10.4404 9.05964 11 9.75 11C10.4404 11 11 10.4404 11 9.75V6.25C11 5.55964 10.4404 5 9.75 5Z" fill="black"/>
+						</svg>
+						
+				</div>
+				<div class="imgBox" id="slower">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.40357 7.30373C7.86548 7.6159 7.86548 8.38415 8.40357 8.69633L14.7672 12.3882C15.2874 12.69 16 12.3452 16 11.6919V4.30816C16 3.6549 15.2874 3.31005 14.7672 3.61186L8.40357 7.30373Z" fill="black"/>
+						<path d="M0.403571 7.30373C-0.134524 7.6159 -0.134524 8.38415 0.403571 8.69633L6.76721 12.3882C7.28744 12.69 8 12.3452 8 11.6919V4.30816C8 3.6549 7.28744 3.31005 6.76721 3.61186L0.403571 7.30373Z" fill="black"/>
+						</svg>
+						
+				</div>
+				<div class="imgBox" id="faster">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7.59643 7.30373C8.13452 7.6159 8.13452 8.38415 7.59643 8.69633L1.23279 12.3882C0.712564 12.69 0 12.3452 0 11.6919V4.30816C0 3.6549 0.712564 3.31005 1.23279 3.61186L7.59643 7.30373Z" fill="black"/>
+						<path d="M15.5964 7.30373C16.1345 7.6159 16.1345 8.38415 15.5964 8.69633L9.23279 12.3882C8.71256 12.69 8 12.3452 8 11.6919V4.30816C8 3.6549 8.71256 3.31005 9.23279 3.61186L15.5964 7.30373Z" fill="black"/>
+						</svg>
+						
+				</div>
+				<div class="imgBox" id="skip">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4 4C4 3.72386 4.22386 3.5 4.5 3.5C4.77614 3.5 5 3.72386 5 4V7.24769L11.2665 3.61216C11.8068 3.29871 12.4993 3.67783 12.4993 4.30846V11.6922C12.4993 12.3228 11.8068 12.7019 11.2665 12.3885L5 8.75296V12C5 12.2761 4.77614 12.5 4.5 12.5C4.22386 12.5 4 12.2761 4 12V4Z" fill="black"/>
+						</svg>
+						
+				</div>
+				<div class="imgBox" id="back">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M12.5 4C12.5 3.72386 12.2761 3.5 12 3.5C11.7239 3.5 11.5 3.72386 11.5 4V7.24808L5.23279 3.61216C4.6925 3.29871 4 3.67783 4 4.30846V11.6922C4 12.3228 4.6925 12.7019 5.23279 12.3885L11.5 8.75257V12C11.5 12.2761 11.7239 12.5 12 12.5C12.2761 12.5 12.5 12.2761 12.5 12V4Z" fill="black"/>
+						</svg>
+						
+				</div>
+				<div class="imgBox" id="mute">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.71659 3.54935C6.88983 3.63261 7 3.8078 7 4V12C7 12.1922 6.88983 12.3674 6.71659 12.4507C6.54336 12.5339 6.33774 12.5105 6.18765 12.3904L3.82461 10.5H1.5C1.22386 10.5 1 10.2761 1 10V6C1 5.72386 1.22386 5.5 1.5 5.5H3.82461L6.18765 3.60957C6.33774 3.4895 6.54336 3.46609 6.71659 3.54935Z" fill="black"/>
+						<path d="M13.8536 5.64645C14.0488 5.84171 14.0488 6.15829 13.8536 6.35355L12.2071 8L13.8536 9.64645C14.0488 9.84171 14.0488 10.1583 13.8536 10.3536C13.6583 10.5488 13.3417 10.5488 13.1464 10.3536L11.5 8.70711L9.85355 10.3536C9.65829 10.5488 9.34171 10.5488 9.14645 10.3536C8.95118 10.1583 8.95118 9.84171 9.14645 9.64645L10.7929 8L9.14645 6.35355C8.95118 6.15829 8.95118 5.84171 9.14645 5.64645C9.34171 5.45118 9.65829 5.45118 9.85355 5.64645L11.5 7.29289L13.1464 5.64645C13.3417 5.45118 13.6583 5.45118 13.8536 5.64645Z" fill="black"/>
+						</svg>
+						
+				</div>
 			</div>
 			<div class="options">
-				<!-- <div class="imgBox display">
-					<img class="image" id="vintage" src="./assets/bandw.png" alt="video player play" />
+				<div class="imgBox display bwbox">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8 3C8.27614 3 8.5 3.22386 8.5 3.5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V3.5C7.5 3.22386 7.72386 3 8 3Z" fill="black"/>
+						<path d="M16 11C16 11.2761 15.7761 11.5 15.5 11.5H13.5C13.2239 11.5 13 11.2761 13 11C13 10.7239 13.2239 10.5 13.5 10.5H15.5C15.7761 10.5 16 10.7239 16 11Z" fill="black"/>
+						<path d="M2.5 11.5C2.77614 11.5 3 11.2761 3 11C3 10.7239 2.77614 10.5 2.5 10.5H0.5C0.223858 10.5 0 10.7239 0 11C0 11.2761 0.223858 11.5 0.5 11.5H2.5Z" fill="black"/>
+						<path d="M13.6569 5.34315C13.8521 5.53841 13.8521 5.85499 13.6569 6.05025L12.2426 7.46447C12.0474 7.65973 11.7308 7.65973 11.5355 7.46447C11.3403 7.2692 11.3403 6.95262 11.5355 6.75736L12.9497 5.34315C13.145 5.14788 13.4616 5.14788 13.6569 5.34315Z" fill="black"/>
+						<path d="M3.75736 7.46447C3.95262 7.65973 4.26921 7.65973 4.46447 7.46447C4.65973 7.2692 4.65973 6.95262 4.46447 6.75736L3.05025 5.34314C2.85499 5.14788 2.53841 5.14788 2.34315 5.34314C2.14789 5.53841 2.14789 5.85499 2.34315 6.05025L3.75736 7.46447Z" fill="black"/>
+						<path d="M8 7C5.79086 7 4 8.79086 4 11C4 11.2761 4.22386 11.5 4.5 11.5H11.5C11.7761 11.5 12 11.2761 12 11C12 8.79086 10.2091 7 8 7Z" fill="black"/>
+						</svg>
+						
 				</div>
-				<div class="imgBox display">
-					<img class="image" id="orig" src="./assets/color.png" alt="video player play" />
-				</div> -->
-				<button class="button is-large imgBox">
-					<i id="vintage" class="fa-solid fa-circle-half-stroke image"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i id="orig" class="fa-solid fa-palette image"></i>
-				</button>
-				<button class="button is-large imgBox">
-					<i class="fa-solid fa-volume-xmark"></i>
-				</button>
+				<div class="imgBox display colorbox">
+					<svg width="30" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8 3C8.27614 3 8.5 3.22386 8.5 3.5V5.5C8.5 5.77614 8.27614 6 8 6C7.72386 6 7.5 5.77614 7.5 5.5V3.5C7.5 3.22386 7.72386 3 8 3Z" fill="black"/>
+						<path d="M16 11C16 11.2761 15.7761 11.5 15.5 11.5H13.5C13.2239 11.5 13 11.2761 13 11C13 10.7239 13.2239 10.5 13.5 10.5H15.5C15.7761 10.5 16 10.7239 16 11Z" fill="black"/>
+						<path d="M2.5 11.5C2.77614 11.5 3 11.2761 3 11C3 10.7239 2.77614 10.5 2.5 10.5H0.5C0.223858 10.5 0 10.7239 0 11C0 11.2761 0.223858 11.5 0.5 11.5H2.5Z" fill="black"/>
+						<path d="M13.6569 5.34315C13.8521 5.53841 13.8521 5.85499 13.6569 6.05025L12.2426 7.46447C12.0474 7.65973 11.7308 7.65973 11.5355 7.46447C11.3403 7.2692 11.3403 6.95262 11.5355 6.75736L12.9497 5.34315C13.145 5.14788 13.4616 5.14788 13.6569 5.34315Z" fill="black"/>
+						<path d="M3.75736 7.46447C3.95262 7.65973 4.26921 7.65973 4.46447 7.46447C4.65973 7.2692 4.65973 6.95262 4.46447 6.75736L3.05025 5.34314C2.85499 5.14788 2.53841 5.14788 2.34315 5.34314C2.14789 5.53841 2.14789 5.85499 2.34315 6.05025L3.75736 7.46447Z" fill="black"/>
+						<path d="M8 7C5.79086 7 4 8.79086 4 11C4 11.2761 4.22386 11.5 4.5 11.5H11.5C11.7761 11.5 12 11.2761 12 11C12 8.79086 10.2091 7 8 7ZM8 8C9.4865 8 10.7205 9.08114 10.9585 10.5H5.04148C5.27952 9.08114 6.5135 8 8 8Z" fill="black"/>
+						</svg>
+						
+				</div>
 			</div>
- 
-				<button id="play" class="button is-large imgBox">
-					<i class="fa-solid fa-play"></i>
-				</button>
-				<button id="pause" class="button is-large imgBox">
-					<i class="fa-solid fa-pause"></i>
-				</button>
-				<button id="slower" class="button is-large imgBox">
-					<i class="fa-solid fa-backward-fast"></i>
-				</button>
-				<button id="faster" class="button is-large imgBox">
-					<i class="fa-solid fa-forward-fast"></i>
-				</button>
-				<button id="back" class="button is-large imgBox">
-					<i class="fa-solid fa-backward-step"></i>
-				</button>
-				<button id="skip" class="button is-large imgBox">
-					<i class="fa-solid fa-forward-step"></i>
-				</button>
-				 
 
 			<h3>
 				<label for="slider">
@@ -118,8 +122,20 @@
 				<input type="range" id="slider" min="0" max="100" value="100" step="5">
 				100%&nbsp;&nbsp;&nbsp;&nbsp;
 				<span id="volume"></span>
+
+
 			</h3>
+			<h3>
+				<label for="slider2">
+					Speed
+				</label>
+				: 0
+				<input type="range" id="slider2" min="0" max="100" value="100" step="5">
+				100%&nbsp;&nbsp;&nbsp;&nbsp;
+				<span id="speed"></span>
 			<br>
+			<h1>Haptic Button</h1>
+<button>Button</button>
 			<p>©2022 Jon Christie</p>
 		</div>
 	</main>
