@@ -1,4 +1,4 @@
-# JS Video Player
+# Javascript Video Player
 
 ## Description
 This web application has a pre-loaded video with controls allowing users to play, pause, stop, rewind, and fast-forward. In addition, you can SLOW DOWN and SPPED UP the video while maintaining decent A/V quality AND without changing pitch. This is why I chose to use a short clip of me playing a little jam, as you can easily slow down the video and learn the licks easily either by listening to or watching the slower version! 
