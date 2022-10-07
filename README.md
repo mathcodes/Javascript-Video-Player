@@ -5,7 +5,7 @@ This web application has a pre-loaded video with controls allowing users to play
 
 ## Future Development:
  - Accounts/login/auth/validation
- - Allow users to load their own videos
+ - Allow users to load their own video
  - Make color buttons at bottom functional
  - Connect to MongoDB and allow users to store their videos on the site using their account login credentials.
  - Expand site with profile page, most liked videos, comments, likes/dislikes, and easy-to-share functionality.
